@@ -1,0 +1,115 @@
+<template>
+    <div class="container">
+        <div class="row">
+            <div class="col s12"><h3>${titulo}</h3></div>
+        </div>
+        <div class="row">
+            <div class="col s12">
+				<md-input md-autocomplete="values.bind: areas" md-label="Soy profesor de:" md-value.bind="area"></md-input>				
+			</div>
+        </div>
+        <div if.bind="area && area != 'Educación inicial'" class="row">
+            <select md-select="Selecciona el ciclo" value.two-way="ciclo">
+                <option value="" disabled selected>Selecciona ciclo</option>
+                <option value="primerCiclo">Primer ciclo</option>
+                <option value="segundoCiclo">Segundo ciclo</option>
+                <option value="educacionMedia">Educación media</option>
+            </select>
+        </div>            
+        
+        
+        <div if.bind="area == 'Educación inicial'" class="row">
+			<div class="row">
+				<div class="col m2">
+            <md-card md-image="https://tuclasepruebas.brightspace.com/shared/login/img/im6-home.jpg" md-title="Conexiones significativas" md-reveal="true">
+                <div>
+                    I am a very simple card. I am good at containing small bits of
+                    information. I am convenient because I require little markup to
+                    use effectively.
+                </div>
+                <div slot="reveal-text">
+                    Here is some more information about this product that is only revealed once clicked on.
+                </div>
+            </md-card>
+			</div>
+			</div>
+
+            Conexiones significativas para aprender en preescolar
+            La fascinación de aprender desde la neurociencia
+            Estrategias para establecer interacciones efectivas en preescolar
+            Lógica matemática: párvulos que resuelven problemas
+
+            Fundación oportunidad:
+            Clima de aula y autorregulación (90% - Diseño está montando)
+            Vocabulario (70% - Pepa va a corregir y preparar para montar)
+
+            Bienestar del profesor:
+            El poder de las emociones en el aula
+            El poder generativo del lenguaje
+            La escucha activa
+
+            Inclusión en el aula
+            Tres ejes para entender las necesidades educativas especiales
+
+        </div>
+		
+		  <div>
+    <md-collection>
+      <md-collection-item class="accent-text avatar">
+        <img src="http://aurelia-ui-toolkits.github.io/demo-materialize/images/collections-sample-1.jpg" alt="" class="circle">
+        <span class="title">Title</span>
+        <p>First Line <br>
+           Second Line
+        </p>
+        <div class="secondary-content">
+          <i class="material-icons">send</i>
+        </div>
+      </md-collection-item>
+      <md-collection-item class="accent-text avatar active">
+        <img src="http://aurelia-ui-toolkits.github.io/demo-materialize/images/collections-sample-1.jpg" alt="" class="circle">
+        <span class="title">Title</span>
+        <p>First Line <br>
+           Second Line
+        </p>
+        <div class="secondary-content">
+          <i class="material-icons">send</i>
+        </div>
+      </md-collection-item>
+      <md-collection-item class="accent-text avatar">
+        <img src="http://aurelia-ui-toolkits.github.io/demo-materialize/images/collections-sample-1.jpg" alt="" class="circle">
+        <span class="title">Title</span>
+        <p>First Line <br>
+           Second Line
+        </p>
+        <div class="secondary-content">
+          <i class="material-icons">send</i>
+        </div>
+      </md-collection-item>
+      <md-collection-item class="accent-text avatar">
+        <i class="circle material-icons primary">person</i>
+        <span class="title">Title</span>
+        <p>First Line <br>
+           Second Line
+        </p>
+        <div class="secondary-content">
+          <i class="material-icons" click.bind="test">send</i>
+        </div>
+      </md-collection-item>
+      <md-collection-item class="accent-text avatar">
+        <i class="circle material-icons primary-text" style="font-size:36px;">person</i>
+        <span class="title">Title</span>
+        <p>First Line <br>
+           Second Line
+        </p>
+        <div class="secondary-content">
+          <i class="material-icons">send</i>
+        </div>
+      </md-collection-item>       
+  </div>
+
+        <div if.show="ciclo == 'Primer ciclo'" class="row">
+            <p>Holaaaaaaaa</p>
+        </div>
+
+    </div>
+</template>
